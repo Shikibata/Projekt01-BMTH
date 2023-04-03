@@ -1,36 +1,62 @@
-@import "./tailwind.css";
-@import "./base.css";
 
-#app {
-	max-width: 1280px;
-	margin: 0 auto;
-	padding: 2rem;
-
-	font-weight: normal;
+@media (max-width: 768px) {
+    :root {
+        --borderBody: 7px solid white;
+    }
 }
 
-a,
-.green {
-	text-decoration: none;
-	color: hsla(160, 100%, 37%, 1);
-	transition: 0.4s;
+@media (min-width: 768px) {
+    :root {
+        --borderBody: 8px solid white;
+    }
 }
 
-@media (hover: hover) {
-	a:hover {
-		background-color: hsla(160, 100%, 37%, 0.2);
-	}
+@media (min-width: 1280px) {
+    :root {
+        --borderBody: 10px solid white;
+    }
 }
 
-@media (min-width: 1024px) {
-	body {
-		display: flex;
-		place-items: center;
-	}
+html {
+    font-size: 1em;
+    line-height: 1;
+    overflow-y: scroll;
+    min-height: 100%;
+    background-color: #000000;
+    font-weight: 400;
+}
 
-	#app {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		padding: 0 2rem;
-	}
+body {
+
+}
+
+body::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height:calc(1vh*100);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+body::after {
+    pointer-events: none;
+    z-index: 9999;
+    background-image: url("../assets/bmth-hex.gif");
+    background-size: 40% auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0; /* Space from this element (entire page) and others*/
+    padding: 0; /*space from content and border*/
+    border: var(--borderBody);
+    overflow:hidden;
+    display:block;
+    box-sizing: border-box;
 }
