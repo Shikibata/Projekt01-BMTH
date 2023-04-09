@@ -24,6 +24,7 @@ html {
     min-height: 100%;
     background-color: #000000;
     font-weight: 400;
+    font-family: "Shirens", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 body {
@@ -43,7 +44,7 @@ body::after {
 
 body::after {
     pointer-events: none;
-    z-index: 9999;
+    z-index: 998;
     background-image: url("../assets/bmth-hex.gif");
     background-size: 40% auto;
     background-position: center center;
